@@ -79,7 +79,7 @@
     "tsconfig.json"
   ],
   "scripts": {
-    "install": "(shx test -f ./script/build.js || run-s build.js) && cross-env npm_config_build_from_source=true node-gyp-build",
+    "install": "(shx test -f ./script/build.js || run-s build.js) && cross-env npm_config_build_from_source=false node-gyp-build",
     "clean": "shx rm -rf ./build ./lib/ ./prebuilds ./script/*.js ./script/*.js.map ./script/*.d.ts ./script/*.tsbuildinfo",
     "clean.temp": "shx rm -rf ./tmp && shx mkdir -p ./tmp && shx touch ./tmp/.gitkeep",
     "build.library.compat": "shx rm -rf ./lib/ts3.7 && downlevel-dts ./lib ./lib/ts3.7 --to=3.7",
